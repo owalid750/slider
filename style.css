@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.slider-container {
+    margin: 10px auto;
+    width: 1600px;
+    height: 900px;
+    position: relative;
+    /* u add the below line remember */
+    overflow: hidden;
+}
+
+.slider-container img {
+    position: absolute;
+
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 1;
+}
+
+.slider-container img.active {
+    opacity: 1;
+}
+
+.slider-container .slide-number {
+    position: absolute;
+    left: 10px;
+    top: 10p;
+    background-color: rgba(0, 0, 0, .6);
+    color: #FFF;
+    padding: 5px 10px;
+    font-size: 20px;
+    z-index: 2;
+    border-radius: 6px;
+}
+
+.slide-controls {
+    width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide-controls .prev,
+.slide-controls .next {
+    background-color: #009688;
+    color: #FFF;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 5px;
+    user-select: none;
+    width: 20%;
+}
+
+.slide-controls .prev {
+    float: left;
+}
+
+.slide-controls .next {
+    float: right;
+}
+
+.slide-controls .prev.disabled,
+.slide-controls .next.disabled {
+    background-color: rgba(0, 150, 136, .5);
+    cursor: no-drop;
+}
+
+.slide-controls .indicators {
+    width: 60%;
+    float: left;
+}
+
+.slide-controls .indicators ul {
+    list-style: none;
+    margin: 0;
+    text-align: center;
+}
+
+.slide-controls .indicators ul li {
+    display: inline-block;
+    background-color: #F6F6F6;
+    color: #333;
+    font-weight: bold;
+    height: 28px;
+    width: 28px;
+    border-radius: 4px;
+    margin: 0 2px;
+    line-height: 28px;
+    cursor: pointer;
+}
+
+.slide-controls .indicators ul li.active {
+    background-color: #009688;
+    color: #FFF;
+}
