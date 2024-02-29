@@ -37,7 +37,7 @@ paginationBullets.forEach(bullet => {
 // Initial setup
 theChecker();
 // Set interval to change slide every 3 seconds
-// setInterval(nextSlide, 3000);
+setInterval(nextSlide, 3000);
 
 // Next slide Function
 function nextSlide() {
